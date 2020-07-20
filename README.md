@@ -11,7 +11,7 @@
 
 ### Tabs接口：
 
-- defaultActiveKey:默认选择的标签key
+- defaultActiveKey:默认选择的标签key tabPosition：方向left或top
 
 - 嵌套子组件：tab标签值，key
 
