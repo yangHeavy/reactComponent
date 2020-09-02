@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.less"
-import Tip from "./Component/tips/tips";
-import Tabs from "./Component/tabs/tabs";
-import Dialog from "./Component/dialog/dialog";
+import Tip from "./Component/tips";
+import Tabs from "./Component/tabs";
+import Dialog from "./Component/dialog";
+const {TabPane} = Tabs;
 
 const App = () => {
   const [visible, setvisible] = useState(false);
@@ -49,30 +50,33 @@ const App = () => {
     {/*
     接口：
         defaultActiveKey:默认选择的标签key
+        tabPosition: left和top两种方向
+        onChange： 标签点击时的回调事件
         子组件：tab标签值，key
     */}
+    {/* // TODO TAbPane的使用 */}
     <Tabs defaultActiveKey="1" tabPosition="top" onChange={handleTab}>
-      <div tab="Tab 1" key="1">
+      <TabPane tab="Tab 1" key="1">
         Content of Tab Pane 1
-    </div>
-      <div tab="Tab 2" key="2">
+    </TabPane>
+      <TabPane tab="Tab 2" key="2">
         Content of Tab Pane 2
-    </div>
-      <div tab="Tab 3" key="3">
+    </TabPane>
+      <TabPane tab="Tab 3" key="3">
         Content of Tab Pane 3
-    </div>
+    </TabPane>
     </Tabs>
     <br/>
     <Tabs defaultActiveKey="1" tabPosition="left">
-      <div tab="Tab 1" key="1">
+      <TabPane tab="Tab 1" key="1">
         Content of Tab Pane 1
-    </div>
-      <div tab="Tab 2" key="2">
+    </TabPane>
+      <TabPane tab="Tab 2" key="2">
         Content of Tab Pane 2
-    </div>
-      <div tab="Tab 3" key="3">
+    </TabPane>
+      <TabPane tab="Tab 3" key="3">
         Content of Tab Pane 3
-    </div>
+    </TabPane>
     </Tabs>
 
     <br />

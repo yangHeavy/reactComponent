@@ -5,14 +5,15 @@
 
 - title:气泡内容
 
-- placement:四个方向，top,right,bottom,left
+- placement:四个方向，top,right,bottom,left，不指定时自动计算，当前版本定位至空间占比最小的上下左右方向
 - 默认边缘对齐
 
 
 ### Tabs接口：
 
-- defaultActiveKey:默认选择的标签key tabPosition：方向left或top
-
+- defaultActiveKey:默认选择的标签key
+- tabPosition: left和top两种方向
+- onChange： 标签点击时的回调事件
 - 嵌套子组件：tab标签值，key
 
 
